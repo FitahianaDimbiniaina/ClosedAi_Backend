@@ -8,7 +8,7 @@ logging.basicConfig(
 )
 
 app = Flask(__name__)
-CORS(app, origins=["https://closedaifita.netlify.app"]) 
+CORS(app, origins=["https://closedaifita.netlify.app"], supports_credentials=True)
 
 @app.route("/chat", methods=["POST"])
 def chat():
