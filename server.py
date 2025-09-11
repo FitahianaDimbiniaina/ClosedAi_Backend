@@ -1,8 +1,7 @@
 import logging
 from flask import Flask, request, jsonify
-from flask_cors import CORS
 from gemini_setup import get_gemini_response
-
+from flask_cors import CORS
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
