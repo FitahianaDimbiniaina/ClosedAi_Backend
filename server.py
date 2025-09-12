@@ -2,13 +2,14 @@ import logging
 from flask import Flask, request, jsonify
 from gemini_setup import get_gemini_response
 from flask_cors import CORS
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
 app = Flask(__name__)
-CORS(app, origins=["https://closedaifita.netlify.app"], supports_credentials=True)
+CORS(app, supports_credentials=True)
 
 @app.route("/chat", methods=["POST"])
 def chat():
